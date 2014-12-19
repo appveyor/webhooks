@@ -1,5 +1,5 @@
-AppVeyor Git and Mercurial hooks
-================================
+AppVeyor webhooks
+=================
 
 Git and Mercurial server-side webhooks for triggering AppVeyor builds.
 
