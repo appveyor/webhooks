@@ -5,7 +5,7 @@ Git and Mercurial server-side webhooks for triggering AppVeyor builds
 
 ## Installing Mercurial hook
 
-Mercurial hook is called on `changegroup` event - this is run after a group of changesets has been brought into the repository from elsewhere. See [this article](http://hgbook.red-bean.com/read/handling-repository-events-with-hooks.html) for more details about Mercurial hooks.
+Mercurial hook is called on `changegroup` event - this is run after a group of changesets has been brought into the repository from elsewhere. See [Mercurial hooks](http://hgbook.red-bean.com/read/handling-repository-events-with-hooks.html) for more details.
 
 Hook can be installed system-wide for all repositories and per-repository. See [Mercurial configuration files](http://www.selenic.com/mercurial/hgrc.5.html) for more details.
 
