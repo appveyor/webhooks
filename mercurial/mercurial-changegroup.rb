@@ -55,6 +55,7 @@ def parse_commits(lines, separator)
 end
 
 commit_id = ENV["HG_NODE"]
+repo_url = ENV["HG_URL"]
 
 # current directory is repository root
 repo_path = Dir.pwd
@@ -80,7 +81,8 @@ appveyor_yml = get_hg_file_contents(commit_id, "appveyor.yml")
 payload = {
 	:commit => commits.first,
 	:repository => {
-		:name => repo_name
+		:name => repo_name,
+		:url => repo_url
 	},
 	:config => appveyor_yml
 }
