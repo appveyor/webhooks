@@ -1,7 +1,11 @@
 AppVeyor webhooks
 =================
 
-Git and Mercurial server-side webhooks for triggering AppVeyor builds.
+> WARNING: This is pre-release software - "generic" Git and Mercurial repositories are not yet implemented in AppVeyor.
+
+When you push new commits to your remote repository you want AppVeyor to instantly start a new build for these changes. Polling repositoris is bad. Fortunately, both Git and Mercurial support hooks - extensibility mechanism that allows calling custom scripts on various server-side events such as "code received". Hook script collects the information about commit(s) and send JSON request to AppVeyor to start a new build.
+
+This repository contains Git and Mercurial server-side hooks for triggering AppVeyor builds. For maximum interoperability between Linux and Windows hooks are written in Ruby. There is only one external dependency - `json`.
 
 ## Installing Mercurial hook
 
