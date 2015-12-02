@@ -116,7 +116,7 @@ payload = {
 
 # send webhook
 uri = URI(webhook_url)
-req = Net::HTTP::Post.new(uri.path, initheader = {'Content-Type' =>'application/json'})
+req = Net::HTTP::Post.new(uri.request_uri, initheader = {'Content-Type' =>'application/json'})
 # ruby 2.0: req = Net::HTTP::Post.new uri
 #req.basic_auth 'username', 'password'
 req.body = payload.to_json
